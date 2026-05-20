@@ -1,0 +1,667 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2026-05-20T16:38:11.991663161Z",
+            "magic": "",
+            "version": ""
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "Prashant260",
+                "project": "migration-lab",
+                "stack": "dev"
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::migration-lab::pulumi:pulumi:Stack::migration-lab-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "bucketName": "demo-bucket-a379fbd",
+                    "subnetId": "subnet-027e50638e8fefd1e",
+                    "vpcId": "vpc-0c401012318f37b11"
+                },
+                "created": "2026-05-20T16:37:48.462982966Z",
+                "modified": "2026-05-20T16:37:48.462982966Z",
+                "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#37,19",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#37,19"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/cmd/run/run.ts#601,38"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::migration-lab::pulumi:providers:aws::default_7_30_0",
+                "custom": true,
+                "id": "34037ab0-374f-433d-a623-b26e37fdf431",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "ap-south-1",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "7.30.0"
+                },
+                "outputs": {
+                    "region": "ap-south-1",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "7.30.0"
+                },
+                "created": "2026-05-20T16:37:54.343248237Z",
+                "modified": "2026-05-20T16:37:54.343248237Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::migration-lab::aws:s3/bucket:Bucket::demo-bucket",
+                "custom": true,
+                "id": "demo-bucket-a379fbd",
+                "type": "aws:s3/bucket:Bucket",
+                "inputs": {
+                    "__defaults": [
+                        "bucket"
+                    ],
+                    "bucket": "demo-bucket-a379fbd",
+                    "region": "ap-south-1",
+                    "tags": {
+                        "Name": "migration-lab-bucket"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-bucket"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":3600000000000,\"read\":1200000000000,\"update\":1200000000000}}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "corsRules": {
+                                    "arr": {}
+                                },
+                                "grants": {
+                                    "arr": {
+                                        "el": {
+                                            "0": {
+                                                "obj": {
+                                                    "ps": {
+                                                        "permissions": {
+                                                            "arr": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "lifecycleRules": {
+                                    "arr": {}
+                                },
+                                "logging": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "objectLockConfiguration": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "replicationConfiguration": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "serverSideEncryptionConfiguration": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {
+                                                "ps": {
+                                                    "rule": {
+                                                        "plu": {
+                                                            "i": {
+                                                                "obj": {
+                                                                    "ps": {
+                                                                        "applyServerSideEncryptionByDefault": {
+                                                                            "plu": {
+                                                                                "i": {
+                                                                                    "obj": {}
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "tags": {
+                                    "map": {}
+                                },
+                                "tagsAll": {
+                                    "map": {}
+                                },
+                                "versioning": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {}
+                                        }
+                                    }
+                                },
+                                "website": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                }
+                            },
+                            "renamed": {
+                                "corsRules": "cors_rule",
+                                "grants": "grant",
+                                "lifecycleRules": "lifecycle_rule"
+                            }
+                        }
+                    },
+                    "accelerationStatus": "",
+                    "acl": null,
+                    "arn": "arn:aws:s3:::demo-bucket-a379fbd",
+                    "bucket": "demo-bucket-a379fbd",
+                    "bucketDomainName": "demo-bucket-a379fbd.s3.amazonaws.com",
+                    "bucketNamespace": "global",
+                    "bucketPrefix": "",
+                    "bucketRegion": "ap-south-1",
+                    "bucketRegionalDomainName": "demo-bucket-a379fbd.s3.ap-south-1.amazonaws.com",
+                    "corsRules": [],
+                    "forceDestroy": false,
+                    "grants": [
+                        {
+                            "id": "5640c45a56ffcdfdcb7e0b4372bbbd9c58cbbfa00cb1c452f274e3c7a0702251",
+                            "permissions": [
+                                "FULL_CONTROL"
+                            ],
+                            "type": "CanonicalUser",
+                            "uri": ""
+                        }
+                    ],
+                    "hostedZoneId": "Z11RGJOFQNVJUP",
+                    "id": "demo-bucket-a379fbd",
+                    "lifecycleRules": [],
+                    "logging": null,
+                    "objectLockConfiguration": null,
+                    "objectLockEnabled": false,
+                    "policy": "",
+                    "region": "ap-south-1",
+                    "replicationConfiguration": null,
+                    "requestPayer": "BucketOwner",
+                    "serverSideEncryptionConfiguration": {
+                        "rule": {
+                            "applyServerSideEncryptionByDefault": {
+                                "kmsMasterKeyId": "",
+                                "sseAlgorithm": "AES256"
+                            },
+                            "bucketKeyEnabled": false
+                        }
+                    },
+                    "tags": {
+                        "Name": "migration-lab-bucket"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-bucket"
+                    },
+                    "versioning": {
+                        "enabled": false,
+                        "mfaDelete": false
+                    },
+                    "website": null,
+                    "websiteDomain": null,
+                    "websiteEndpoint": null
+                },
+                "parent": "urn:pulumi:dev::migration-lab::pulumi:pulumi:Stack::migration-lab-dev",
+                "provider": "urn:pulumi:dev::migration-lab::pulumi:providers:aws::default_7_30_0::34037ab0-374f-433d-a623-b26e37fdf431",
+                "propertyDependencies": {
+                    "tags": []
+                },
+                "created": "2026-05-20T16:37:56.560825852Z",
+                "modified": "2026-05-20T16:37:56.560825852Z",
+                "sourcePosition": "project:///index.ts#41,16",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///index.ts#41,16"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3009,23"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3011,12"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/cmd/run/run.ts#541,33"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#78,28"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/resource.ts#1593,22"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::migration-lab::aws:ec2/vpc:Vpc::main-vpc",
+                "custom": true,
+                "id": "vpc-0c401012318f37b11",
+                "type": "aws:ec2/vpc:Vpc",
+                "inputs": {
+                    "__defaults": [],
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "region": "ap-south-1",
+                    "tags": {
+                        "Name": "migration-lab-vpc"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-vpc"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "tags": {
+                                    "map": {}
+                                },
+                                "tagsAll": {
+                                    "map": {}
+                                }
+                            }
+                        }
+                    },
+                    "arn": "arn:aws:ec2:ap-south-1:689280759369:vpc/vpc-0c401012318f37b11",
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.0.0.0/16",
+                    "defaultNetworkAclId": "acl-03874c4e7bc7cdce3",
+                    "defaultRouteTableId": "rtb-0c1bc4972c96c355c",
+                    "defaultSecurityGroupId": "sg-090de1382a716d16d",
+                    "dhcpOptionsId": "dopt-0eeac33f0f36bf956",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "enableNetworkAddressUsageMetrics": false,
+                    "id": "vpc-0c401012318f37b11",
+                    "instanceTenancy": "default",
+                    "ipv4IpamPoolId": null,
+                    "ipv4NetmaskLength": null,
+                    "ipv6AssociationId": "",
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockNetworkBorderGroup": "",
+                    "ipv6IpamPoolId": "",
+                    "ipv6NetmaskLength": 0,
+                    "mainRouteTableId": "rtb-0c1bc4972c96c355c",
+                    "ownerId": "689280759369",
+                    "region": "ap-south-1",
+                    "tags": {
+                        "Name": "migration-lab-vpc"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-vpc"
+                    }
+                },
+                "parent": "urn:pulumi:dev::migration-lab::pulumi:pulumi:Stack::migration-lab-dev",
+                "provider": "urn:pulumi:dev::migration-lab::pulumi:providers:aws::default_7_30_0::34037ab0-374f-433d-a623-b26e37fdf431",
+                "propertyDependencies": {
+                    "cidrBlock": [],
+                    "enableDnsHostnames": [],
+                    "enableDnsSupport": [],
+                    "tags": []
+                },
+                "created": "2026-05-20T16:37:56.834991426Z",
+                "modified": "2026-05-20T16:37:56.834991426Z",
+                "sourcePosition": "project:///index.ts#2,13",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///index.ts#2,13"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3009,23"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3011,12"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/cmd/run/run.ts#541,33"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#78,28"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/resource.ts#1593,22"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::migration-lab::aws:ec2/securityGroup:SecurityGroup::web-sg",
+                "custom": true,
+                "id": "sg-035d6f82ec6cad3dc",
+                "type": "aws:ec2/securityGroup:SecurityGroup",
+                "inputs": {
+                    "__defaults": [
+                        "name"
+                    ],
+                    "description": "Allow SSH",
+                    "egress": [
+                        {
+                            "__defaults": [],
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "fromPort": 0,
+                            "protocol": "-1",
+                            "toPort": 0
+                        }
+                    ],
+                    "ingress": [
+                        {
+                            "__defaults": [],
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "fromPort": 22,
+                            "protocol": "tcp",
+                            "toPort": 22
+                        }
+                    ],
+                    "name": "web-sg-5b1c55d",
+                    "region": "ap-south-1",
+                    "tags": {
+                        "Name": "migration-lab-sg"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-sg"
+                    },
+                    "vpcId": "vpc-0c401012318f37b11"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":900000000000},\"schema_version\":\"1\"}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "egress": {
+                                    "arr": {
+                                        "el": {
+                                            "0": {
+                                                "obj": {
+                                                    "ps": {
+                                                        "cidrBlocks": {
+                                                            "arr": {}
+                                                        },
+                                                        "ipv6CidrBlocks": {
+                                                            "arr": {}
+                                                        },
+                                                        "prefixListIds": {
+                                                            "arr": {}
+                                                        },
+                                                        "securityGroups": {
+                                                            "arr": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "ingress": {
+                                    "arr": {
+                                        "el": {
+                                            "0": {
+                                                "obj": {
+                                                    "ps": {
+                                                        "cidrBlocks": {
+                                                            "arr": {}
+                                                        },
+                                                        "ipv6CidrBlocks": {
+                                                            "arr": {}
+                                                        },
+                                                        "prefixListIds": {
+                                                            "arr": {}
+                                                        },
+                                                        "securityGroups": {
+                                                            "arr": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "tags": {
+                                    "map": {}
+                                },
+                                "tagsAll": {
+                                    "map": {}
+                                }
+                            }
+                        }
+                    },
+                    "arn": "arn:aws:ec2:ap-south-1:689280759369:security-group/sg-035d6f82ec6cad3dc",
+                    "description": "Allow SSH",
+                    "egress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "",
+                            "fromPort": 0,
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "-1",
+                            "securityGroups": [],
+                            "self": false,
+                            "toPort": 0
+                        }
+                    ],
+                    "id": "sg-035d6f82ec6cad3dc",
+                    "ingress": [
+                        {
+                            "cidrBlocks": [
+                                "0.0.0.0/0"
+                            ],
+                            "description": "",
+                            "fromPort": 22,
+                            "ipv6CidrBlocks": [],
+                            "prefixListIds": [],
+                            "protocol": "tcp",
+                            "securityGroups": [],
+                            "self": false,
+                            "toPort": 22
+                        }
+                    ],
+                    "name": "web-sg-5b1c55d",
+                    "namePrefix": "",
+                    "ownerId": "689280759369",
+                    "region": "ap-south-1",
+                    "revokeRulesOnDelete": false,
+                    "tags": {
+                        "Name": "migration-lab-sg"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-sg"
+                    },
+                    "vpcId": "vpc-0c401012318f37b11"
+                },
+                "parent": "urn:pulumi:dev::migration-lab::pulumi:pulumi:Stack::migration-lab-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::migration-lab::aws:ec2/vpc:Vpc::main-vpc"
+                ],
+                "provider": "urn:pulumi:dev::migration-lab::pulumi:providers:aws::default_7_30_0::34037ab0-374f-433d-a623-b26e37fdf431",
+                "propertyDependencies": {
+                    "description": [],
+                    "egress": [],
+                    "ingress": [],
+                    "tags": [],
+                    "vpcId": [
+                        "urn:pulumi:dev::migration-lab::aws:ec2/vpc:Vpc::main-vpc"
+                    ]
+                },
+                "created": "2026-05-20T16:38:00.330616391Z",
+                "modified": "2026-05-20T16:38:00.330616391Z",
+                "sourcePosition": "project:///index.ts#21,12",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///index.ts#21,12"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3009,23"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3011,12"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/cmd/run/run.ts#541,33"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#78,28"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/resource.ts#1593,22"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::migration-lab::aws:ec2/subnet:Subnet::public-subnet",
+                "custom": true,
+                "id": "subnet-027e50638e8fefd1e",
+                "type": "aws:ec2/subnet:Subnet",
+                "inputs": {
+                    "__defaults": [],
+                    "availabilityZone": "ap-south-1a",
+                    "cidrBlock": "10.0.1.0/24",
+                    "mapPublicIpOnLaunch": true,
+                    "region": "ap-south-1",
+                    "tags": {
+                        "Name": "migration-lab-subnet"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-subnet"
+                    },
+                    "vpcId": "vpc-0c401012318f37b11"
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":600000000000,\"delete\":1200000000000},\"schema_version\":\"1\"}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "tags": {
+                                    "map": {}
+                                },
+                                "tagsAll": {
+                                    "map": {}
+                                }
+                            }
+                        }
+                    },
+                    "arn": "arn:aws:ec2:ap-south-1:689280759369:subnet/subnet-027e50638e8fefd1e",
+                    "assignIpv6AddressOnCreation": false,
+                    "availabilityZone": "ap-south-1a",
+                    "availabilityZoneId": "aps1-az1",
+                    "cidrBlock": "10.0.1.0/24",
+                    "customerOwnedIpv4Pool": "",
+                    "enableDns64": false,
+                    "enableLniAtDeviceIndex": 0,
+                    "enableResourceNameDnsARecordOnLaunch": false,
+                    "enableResourceNameDnsAaaaRecordOnLaunch": false,
+                    "id": "subnet-027e50638e8fefd1e",
+                    "ipv4IpamPoolId": null,
+                    "ipv4NetmaskLength": null,
+                    "ipv6CidrBlock": "",
+                    "ipv6CidrBlockAssociationId": "",
+                    "ipv6IpamPoolId": null,
+                    "ipv6Native": false,
+                    "ipv6NetmaskLength": null,
+                    "mapCustomerOwnedIpOnLaunch": false,
+                    "mapPublicIpOnLaunch": true,
+                    "outpostArn": "",
+                    "ownerId": "689280759369",
+                    "privateDnsHostnameTypeOnLaunch": "ip-name",
+                    "region": "ap-south-1",
+                    "tags": {
+                        "Name": "migration-lab-subnet"
+                    },
+                    "tagsAll": {
+                        "Name": "migration-lab-subnet"
+                    },
+                    "vpcId": "vpc-0c401012318f37b11"
+                },
+                "parent": "urn:pulumi:dev::migration-lab::pulumi:pulumi:Stack::migration-lab-dev",
+                "dependencies": [
+                    "urn:pulumi:dev::migration-lab::aws:ec2/vpc:Vpc::main-vpc"
+                ],
+                "provider": "urn:pulumi:dev::migration-lab::pulumi:providers:aws::default_7_30_0::34037ab0-374f-433d-a623-b26e37fdf431",
+                "propertyDependencies": {
+                    "availabilityZone": [],
+                    "cidrBlock": [],
+                    "mapPublicIpOnLaunch": [],
+                    "tags": [],
+                    "vpcId": [
+                        "urn:pulumi:dev::migration-lab::aws:ec2/vpc:Vpc::main-vpc"
+                    ]
+                },
+                "created": "2026-05-20T16:38:08.833242514Z",
+                "modified": "2026-05-20T16:38:08.833242514Z",
+                "sourcePosition": "project:///index.ts#11,16",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///index.ts#11,16"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3009,23"
+                    },
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/pulumi/vendor/ts-node@7.0.1/index.js#3011,12"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/cmd/run/run.ts#541,33"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/runtime/stack.ts#78,28"
+                    },
+                    {
+                        "sourcePosition": "project:///node_modules/@pulumi/resource.ts#1593,22"
+                    }
+                ]
+            }
+        ],
+        "metadata": {}
+    }
+}

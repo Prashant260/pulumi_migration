@@ -1,0 +1,47 @@
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Codex/agent local metadata
+.agents/
+.codex/
+**/.agents/
+**/.codex/
+
+# Node/Pulumi TypeScript
+node_modules/
+**/node_modules/
+bin/
+**/bin/
+dist/
+**/dist/
+*.tsbuildinfo
+
+# Pulumi local/runtime files
+.pulumi/
+**/.pulumi/
+Pulumi.*.yaml.bak
+
+# OpenTofu/Terraform local files
+.terraform/
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfplan
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Logs and environment files
+*.log
+.env
+.env.*
+!.env.example
